@@ -7,7 +7,7 @@ usage
 
 in your controller in a specific action use the code as bellow (Employees is an orm model)
 
-<?php
+
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
@@ -19,12 +19,12 @@ in your controller in a specific action use the code as bellow (Employees is an 
 
         return $this->render('index', ['dataProvider' => $dataProvider]);
     }
-?>
+
 
 In view file add the bellow code
 
 
-<?php
+
 
 use common\widgets\tabulator\TabulatorView;
 use common\models\Employees;
@@ -39,6 +39,6 @@ echo TabulatorView::widget([
     ],
     'selector_id' => 'example-tabulator',
 ]);
-?>
+
 
 
