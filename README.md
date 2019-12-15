@@ -7,6 +7,7 @@ usage
 
 in your controller in a specific action use the code as bellow (Employees is an orm model)
 
+<?php
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
