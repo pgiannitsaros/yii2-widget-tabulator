@@ -29,7 +29,8 @@ class TabulatorView extends \yii\bootstrap\Widget
 
     public function run()
     {
+        $model = new $this->dataProvider->query->modelClass();
         TabulatorAsset::register($this->getView());
-        return $this->render('index', ['dataProvider' => $this->dataProvider, 'columns' => $this->columns, 'model' => $this->model, 'selector_id' => $this->selector_id]);
+        return $this->render('index', ['dataProvider' => $this->dataProvider, 'columns' => $this->columns, 'model' => $model, 'selector_id' => $this->selector_id]);
     }
 }
