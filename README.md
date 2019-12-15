@@ -6,7 +6,7 @@ download the repository, unzip and rename the folder to tabulator and copy this 
 usage
 
 in your controller in a specific action use the code as bellow (Employees is an orm model)
-`
+
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
@@ -18,11 +18,11 @@ in your controller in a specific action use the code as bellow (Employees is an 
 
         return $this->render('index', ['dataProvider' => $dataProvider]);
     }
-`
+?>
 
 In view file add the bellow code
 
-`
+
 <?php
 
 use common\widgets\tabulator\TabulatorView;
@@ -38,6 +38,6 @@ echo TabulatorView::widget([
     ],
     'selector_id' => 'example-tabulator',
 ]);
-`
+?>
 
 
