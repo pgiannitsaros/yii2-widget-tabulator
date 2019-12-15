@@ -5,13 +5,13 @@ download the repository, unzip and rename the folder to tabulator and copy this 
 
 usage
 
-in your controller in a specific action use the code as bellow (Employees is an orm model)
+in your controller in a specific action use the code as bellow
 
 ```
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => Employees::find(), //->select(['id', 'last_name', 'first_name']),
+            'query' => [Your_model_here]::find(),
             'pagination' => [
                 'pageSize' => 20,
             ],
@@ -31,7 +31,6 @@ use common\models\Employees;
 
 echo TabulatorView::widget([
     'dataProvider' => $dataProvider,
-    'model' => new Employees(),
     'columns' => [
         'last_name',
         'first_name',
